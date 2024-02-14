@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dynamic Shopping List</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div>
+        <label for="item-name-input">Item Name:</label>
+        <input type="text" id="item-name-input" aria-labelledby="item-name-label">
+    </div>
+    <div>
+        <label for="item-price-input">Item Price:</label>
+        <input type="number" id="item-price-input" aria-labelledby="item-price-label">
+    </div>
+    <button id="add" onclick="addItem()">Add</button>
+    
+    <table>
+        <thead>
+            <tr>
+                <th aria-label="Item Name" id="item">Item Name</th>
+                <th aria-label="Item Price" id="price">Item Price</th>
+            </tr>
+        </thead>
+        <tbody id="item-list">
+            <!-- Initially, one row with total as 0 -->
+            <tr>
+                <td aria-label="Item Name">-</td>
+                <td aria-label="Item Price" id="total">0</td>
+            </tr>
+        </tbody>
+    </table>
 
+    <h3 id="grand-total">Grand Total: <span id="total-amount">0</span></h3>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
